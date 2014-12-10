@@ -202,12 +202,12 @@
 		};
 
 		//  Move to previous/next slide
-		_.next = function() {
-			return _.stop().to(_.i + 1);
+		_.next = function( cb ) {
+			return _.stop().to(_.i + 1, cb);
 		};
 
-		_.prev = function() {
-			return _.stop().to(_.i - 1);
+		_.prev = function( cb ) {
+			return _.stop().to(_.i - 1, cb);
 		};
 
 		//  Create dots and arrows
