@@ -182,7 +182,7 @@
 
 				el.animate(obj, speed, easing) && ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, easing, function(data) {
 					_.i = index;
-
+					callback && callback.call(el, _.i);
 					$.isFunction(o.complete) && !callback && o.complete(el, target);
 				});
 			};
